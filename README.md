@@ -10,7 +10,7 @@ The `factors` script is designed to factor natural numbers into a product of two
 
 ```./factors <file>```
   
-+ <file>: The name of the input file containing natural numbers, with one number per line.
++ <file> : The name of the input file containing natural numbers, with one number per line.
 
 Example:
 ```./factors tests/test00```
@@ -21,7 +21,7 @@ The rsa script is specifically for the RSA Factoring Challenge. It factors RSA n
 ### Usage
 ```./rsa <file>```
   
-+ <file>: The name of the input file containing RSA numbers, with one number per line.
++ <file> : The name of the input file containing RSA numbers, with one number per line.
 
 Example:
 ```./rsa tests/rsa-1```
@@ -41,7 +41,7 @@ Both scripts depend on the sympy library for prime number checks and efficient f
 
 ## How to Run
 
-###Clone this repository to your local machine:
+### Clone this repository to your local machine:
 ```git clone https://github.com/nobleenia/RSA-Factoring-Challenge.git```
 ```cd RSA-Factoring-Challenge```
 
@@ -49,4 +49,4 @@ Both scripts depend on the sympy library for prime number checks and efficient f
 ```chmod +x factors```
 ```chmod +x rsa```
 
-Feel free to modify and extend this repository for your needs, and good luck with the RSA Factoring Challenge!
+Feel free to modify and extend this repository for your needs!
