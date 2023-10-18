@@ -1,0 +1,52 @@
+#!/usr/bin/env python
+
+# Function to factorize a number into two smaller numbers
+def factorize(n):
+    """
+    Factorizes a number into two smaller numbers.
+
+    Args:
+    n (int): The number to factorize.
+
+    Returns:
+    tuple: A tuple (p, q) where p and q are the factors of n. 
+    If n is a prime number or 1, it returns None.
+    """
+    for i in range(2, n):
+        if n % i == 0:
+            return i, n // i
+    return None
+
+# Main function to read the input file and factorize numbers
+def main(input_file):
+    """
+    Main function to read an input file and factorize numbers.
+    
+    Args:
+    input_file (str): The name of the input file containing natural numbers.
+    """
+    try:
+        with open(input_file, 'r') as file:
+            for line in file:
+                n = int(line.strip())
+                factors = factorize(n)
+                if factors:
+                    p, q = factors
+                    print(f"{n}={p}*{q}")
+                else:
+                    print(f"{n} is a prime number or 1")
+
+    except FileNotFoundError:
+        print(f"File {input_file} not found.")
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) != 2:
+        print("Usage: factors <file>")
+        sys.exit(1)
+
+    input_file = sys.argv[1]
+    main(input_file)

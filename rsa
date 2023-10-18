@@ -1,0 +1,45 @@
+#!/usr/bin/env python
+
+from sympy import isprime, factorint
+import sys
+
+def factor_rsa_number(n):
+    """
+    Factorizes an RSA number into two prime factors, if possible.
+
+    Args:
+    n (int): The RSA number to factorize.
+
+    Returns:
+    str: A string with the prime factorization of the number, or a message
+         indicating if the number is prime or cannot be factored into two primes.
+    """
+    if isprime(n):
+        return f"{n} is a prime number."
+
+    factors = factorint(n)
+
+    if len(factors) == 2:
+        p, q = factors.keys()
+        return f"{n}={p}*{q}"
+    else:
+        return f"Unable to factorize {n} into two prime factors."
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: rsa <file>")
+        sys.exit(1)
+
+    input_file = sys.argv[1]
+
+    try:
+        with open(input_file, 'r') as file:
+            for line in file:
+                n = int(line.strip())
+                result = factor_rsa_number(n)
+                print(result)
+
+    except FileNotFoundError:
+        print(f"File {input_file} not found.")
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
