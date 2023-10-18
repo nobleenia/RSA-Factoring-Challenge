@@ -8,8 +8,7 @@ The `factors` script is designed to factor natural numbers into a product of two
 
 ### Usage
 
-```bash
-./factors <file>bash```
+```./factors <file>```
 
 + <file>: The name of the input file containing natural numbers, with one number per line.
 
