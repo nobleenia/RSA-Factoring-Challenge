@@ -10,18 +10,18 @@ The `factors` script is designed to factor natural numbers into a product of two
 
 ```./factors <file>```
   
-+ <file> : The name of the input file containing natural numbers, with one number per line.
++ `<file>` : The name of the input file containing natural numbers, with one number per line.
 
 Example:
 ```./factors tests/test00```
 
-## rsa Script
-The rsa script is specifically for the RSA Factoring Challenge. It factors RSA numbers into their prime factors, and it only works if there are exactly two prime factors for the given number.
+## `rsa` Script
+The `rsa` script is specifically for the RSA Factoring Challenge. It factors RSA numbers into their prime factors, and it only works if there are exactly two prime factors for the given number.
 
 ### Usage
 ```./rsa <file>```
   
-+ <file> : The name of the input file containing RSA numbers, with one number per line.
++ `<file>` : The name of the input file containing RSA numbers, with one number per line.
 
 Example:
 ```./rsa tests/rsa-1```
